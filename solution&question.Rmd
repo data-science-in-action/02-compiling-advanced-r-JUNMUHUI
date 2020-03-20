@@ -1,0 +1,34 @@
+---
+title: "question&solution"
+author: "MuHuijun"
+date: "2020/3/20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Solution
+
+### Unable to load devtools package
+
+Execute the following command in Git.
+
+```{r eval=FALSE}
+$ git config --global http.sslBackend "openssl"
+$ git config --global http.sslCAInfo [path to .pem file]
+```
+
+### Quitting from lines 223-235 (Introduciton.Rmd)
+
+Adding `encoding = "UTF-8"` in line 224 can fix it. The line 224 is displayed as
+
+```{r eval=FALSE}
+contributors <- read.csv("contributors.csv", stringsAsFactors = FALSE,encoding = "UTF-8")
+```
+
+# Question
+
+I can make the html,but I can't do the pdf,evenif I download WiTeX.
